@@ -123,7 +123,8 @@ print(df)
 - the fetch_data is provided as an example.
 - Remember not to commit the .env file to your Git repository, especially if it contains sensitive information like passwords or API keys. You should add .env to your .gitignore file to ensure it's not accidentally included in your commits. If you haven't already created a .gitignore file, you can create one in the root directory of your project and add ".env" to it. This will prevent Git from tracking changes to the .env file.
 - this can de done :
-  ```.gitignore
+  ```
+  **.gitignore**
   .env
    ```
    
