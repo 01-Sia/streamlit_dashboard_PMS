@@ -71,6 +71,7 @@ SECRET_KEY=your_secret_key_for_authentication(if any )
 The key dependencies required for this project are listed in the requirements.txt file. Some of the main libraries include:
 
 - Streamlit
+- Pandas
 - Altair
 - MySQL Connector
 - dotenv
