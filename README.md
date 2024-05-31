@@ -7,6 +7,7 @@
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Dependencies](#dependencies)
+- [NOTE](#note)
 
 ## Project Overview
 The Project Management System (PMS) Streamlit Dashboard is designed to provide a comprehensive overview of projects managed by government organizations across India. It includes interactive visualizations and metrics that allow users to track project progress, budget, timelines, and other key performance indicators.
@@ -79,3 +80,45 @@ To install all dependencies, run:
 ```
 pip install -r requirements.txt
 ```
+## NOTE 
+- when connecting woth the databse , add the databse connector for the specific database and after fetching the data convert it into df as mentioned below:
+   ```
+- import mysql.connector
+   import os
+   from dotenv import load_dotenv
+
+   load_dotenv()
+
+   def get_db_connection():
+       return mysql.connector.connect(
+           host=os.getenv("DB_HOST"),
+           user=os.getenv("DB_USER"),
+           password=os.getenv("DB_PASSWORD"),
+           database=os.getenv("DB_NAME")
+       )
+   ```
+
+If the above code snippet creates error, replace it with the below given snippet if the credentials provided are correct  :
+- Connect the databse
+   ```mydb = mysql.connector.connect(
+    host="your_host”,
+    user="your_user",
+    password="your_password",
+    database="the name of yr database ",
+    port = 3306( default)    connect it with the port your server is connected to.
+)
+ ```
+ - Create the cursor after the database connection to fetch the data from database :
+   ``` def fetch_data():
+    db_connection = get_db_connection()
+    mycursor = db_connection.cursor()
+    mycursor.execute("SELECT * FROM flights;")
+    data = mycursor.fetchall()
+    column_names = [i[0] for i in mycursor.description]
+    db_connection.close()
+    return data,column_names
+data,column_names= fetch_data()
+df= pd.DataFrame(data,columns =column_names)
+print(df)
+ ```
+the fetch_data is provided as an example.
