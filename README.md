@@ -8,6 +8,7 @@
 - [Configuration](#configuration)
 - [Dependencies](#dependencies)
 - [NOTE](#note)
+- [Github Deployment](#github-deployment)
 
 ## Project Overview
 The Project Management System (PMS) Streamlit Dashboard is designed to provide a comprehensive overview of projects managed by government organizations across India. It includes interactive visualizations and metrics that allow users to track project progress, budget, timelines, and other key performance indicators.
@@ -127,4 +128,23 @@ print(df)
   ```
   .env
    ```
-   
+  ## Github Deployment 
+1. To deploy a Streamlit app directly from a GitHub repository, you can use Streamlit Sharing, which allows you to host and share your Streamlit apps for free. Here's a step-by-step guide:
+
+2. Prepare your Streamlit app: Make sure your Streamlit app is working locally and is pushed to a GitHub repository. Your app should have a requirements.txt file if it has any dependencies.
+
+3. Create a Streamlit Sharing account: Go to share.streamlit.io and sign in with your GitHub account. If you don't have a Streamlit Sharing account yet, you'll need to request access.
+
+4. Deploy your app:
+
+  - Click on "New app"
+  - Select the GitHub repository where your Streamlit app is located
+  - Click "Deploy"
+5. Wait for deployment: Streamlit Sharing will automatically deploy your app. This process may take a few minutes.
+
+6. Access your app: Once deployed, you'll see a URL where your app is hosted. You can share this URL with others to access your Streamlit app.
+
+7. Optional: Configure settings:
+
+You can configure settings for your app, such as the number of instances and memory allocation, from the Streamlit Sharing dashboard.
+That's it! Your Streamlit app should now be deployed and accessible online.
