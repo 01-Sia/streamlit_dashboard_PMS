@@ -139,6 +139,7 @@ print(df)
 
   - Click on "New app"
   - Select the GitHub repository where your Streamlit app is located
+  - Change the name of .py file to that of yours.
   - Click "Deploy"
 5. Wait for deployment: Streamlit Sharing will automatically deploy your app. This process may take a few minutes.
 
