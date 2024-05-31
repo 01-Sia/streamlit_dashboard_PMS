@@ -66,7 +66,7 @@ DB_USER=your_database_user
 DB_PASSWORD=your_database_password
 DB_NAME=your_database_name
 SECRET_KEY=your_secret_key_for_authentication(if any )
-
+```
 ## Dependencies
 The key dependencies required for this project are listed in the requirements.txt file. Some of the main libraries include:
 
