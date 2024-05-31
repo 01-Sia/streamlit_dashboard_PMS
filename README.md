@@ -82,8 +82,7 @@ pip install -r requirements.txt
 ```
 ## NOTE 
 - when connecting woth the databse , add the databse connector for the specific database and after fetching the data convert it into df as mentioned below:
-   ```
-- import mysql.connector
+   ```import mysql.connector
    import os
    from dotenv import load_dotenv
 
